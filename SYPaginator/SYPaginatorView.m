@@ -217,7 +217,14 @@
 
 
 #pragma mark - Actions
-
+- (BOOL)isPageControlShown
+{
+    return ! _pageControl.hidden;
+}
+- (void)setShowsPageControl:(BOOL)shown
+{
+    _pageControl.hidden = !shown;
+}
 - (void)_pageControlChanged:(id)sender {
 	[self setCurrentPageIndex:_pageControl.currentPage animated:YES];
 }
