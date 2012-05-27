@@ -49,7 +49,11 @@
 - (CGSize)pageSize
 {
     if(_delegate && [_delegate respondsToSelector:@selector(pageSizeForPaginatorView:)])
-        return [_delegate pageSizeForPaginatorView:self];
+    {
+        CGSize size = [_delegate pageSizeForPaginatorView:self];
+        self.numberOfPagesToPreload = 2 + floor(_scrollView.bounds.size.width / size.width);
+        return size;
+    }
     //Default to scroll bounds
     return _scrollView.bounds.size;
 }
