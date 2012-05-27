@@ -217,6 +217,14 @@
 
 
 #pragma mark - Actions
+- (BOOL)isPagingEnabled
+{
+    return _scrollView.pagingEnabled;
+}
+- (void)setPagingEnabled:(BOOL)enabled
+{
+    _scrollView.pagingEnabled = enabled;
+}
 - (BOOL)isPageControlShown
 {
     return ! _pageControl.hidden;

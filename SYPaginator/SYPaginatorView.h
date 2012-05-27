@@ -35,6 +35,7 @@ typedef enum {
 @property (nonatomic, strong, readonly) UIScrollView *scrollView;
 @property (nonatomic, strong, readonly) SYPageControl *pageControl;
 @property (nonatomic, assign, getter = isPageControlShown) BOOL showsPageControl;
+@property (nonatomic, assign, getter = isPagingEnabled) BOOL pagingEnabled;
 @property (nonatomic, assign) NSInteger currentPageIndex;
 @property (nonatomic, assign, readonly) NSInteger numberOfPages;
 @property (nonatomic, assign) CGFloat pageGapWidth;
