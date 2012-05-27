@@ -70,5 +70,5 @@ typedef enum {
 - (void)paginatorViewDidBeginPaging:(SYPaginatorView *)paginatorView;
 - (void)paginatorView:(SYPaginatorView *)paginatorView willDisplayView:(UIView *)view atIndex:(NSInteger)pageIndex;
 - (void)paginatorView:(SYPaginatorView *)paginatorView didScrollToPageAtIndex:(NSInteger)pageIndex;
-
+- (CGSize)pageSizeForPaginatorView:(SYPaginatorView *)paginatorView;
 @end
