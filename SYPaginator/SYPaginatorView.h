@@ -36,6 +36,8 @@ typedef enum {
 @property (nonatomic, strong, readonly) SYPageControl *pageControl;
 @property (nonatomic, assign, getter = isPageControlShown) BOOL showsPageControl;
 @property (nonatomic, assign, getter = isPagingEnabled) BOOL pagingEnabled;
+
+@property (nonatomic, readonly) CGSize pageSize;
 @property (nonatomic, assign) NSInteger currentPageIndex;
 @property (nonatomic, assign, readonly) NSInteger numberOfPages;
 @property (nonatomic, assign) CGFloat pageGapWidth;
@@ -70,5 +72,5 @@ typedef enum {
 - (void)paginatorViewDidBeginPaging:(SYPaginatorView *)paginatorView;
 - (void)paginatorView:(SYPaginatorView *)paginatorView willDisplayView:(UIView *)view atIndex:(NSInteger)pageIndex;
 - (void)paginatorView:(SYPaginatorView *)paginatorView didScrollToPageAtIndex:(NSInteger)pageIndex;
-
+- (CGSize)pageSizeForPaginatorView:(SYPaginatorView *)paginatorView;
 @end
